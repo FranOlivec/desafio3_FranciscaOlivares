@@ -1,0 +1,21 @@
+<h1>Registro de Documentales</h1>
+
+<%= form_with url:'/documentary_films/create', model: @documentary_film, method: :post do |form|%>
+
+    <div>
+        <%= form.label :name, "Nombre del Documental"%> <br>
+        <%= form.text_field :name %> 
+    </div> <br>
+    <div>
+        <%= form.label :synopsis, "Sinopsis" %> <br>
+        <%= form.text_area :synopsis %> 
+    </div><br>
+    <div>
+        <%= form.label :director, "Director" %> <br>
+        <%= form.text_field :director %>  
+    </div><br>
+    <div>
+        <%= form.submit "Guardar Documental"%> <br>
+    </div>
+
+<% end %>

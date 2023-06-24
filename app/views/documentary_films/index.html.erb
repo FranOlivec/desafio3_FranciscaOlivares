@@ -1,0 +1,33 @@
+<div> 
+  <h1>Listado de Documentales</h1>
+</div>
+<br>
+
+<%= link_to 'Ingresar un nuevo Documental', documentary_films_new_path %>
+<br>
+<br>
+<div>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre del Documental</th>
+        <th scope="col">Sinopsis</th>
+        <th scope="col">Director</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @documentary_films.each do |documentary_film| %>
+      <tr>
+        <th scope="row"><%= documentary_film.id %></th>
+        <td><%= documentary_film.name %></>
+        <td><%= documentary_film.synopsis %></td>
+        <td><%= documentary_film.director %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table> 
+
+</div>
+
+

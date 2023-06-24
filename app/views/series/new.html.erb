@@ -1,0 +1,21 @@
+<h1>Registro de Series</h1>
+
+<%= form_with url: '/series/create', model: @serie, method: :post do |form|%>
+
+    <div>
+        <%= form.label :name, "Nombre de la Serie"  %> <br>
+        <%= form.text_field :name %> 
+    </div><br>
+    <div>
+        <%= form.label :synopsis, "Sinopsis" %> <br>
+        <%= form.text_area :synopsis %> 
+    </div><br>
+    <div>
+        <%= form.label :director, "Director" %> <br>
+        <%= form.text_field :director %>  
+    </div><br>
+    <div>
+        <%= form.submit "Guardar Serie"%>
+    </div>
+
+<% end %>
